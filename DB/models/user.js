@@ -1,4 +1,4 @@
-import { Schema } from "mongoose";
+import { Schema, model } from "mongoose";
 
 const userschema = new Schema({
   userName: {
@@ -33,3 +33,4 @@ forgetcode:String
 },{
 timestamps:true
 });
+export const userModel = model("user",userschema) 
