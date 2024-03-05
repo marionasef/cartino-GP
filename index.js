@@ -4,11 +4,14 @@ import ConnectionDB from './DB/connection.js'
 import * as allRouters from './src/modules/index.routes.js'
 
 
+
 const app = express()
 const port = 3000
 app.use(express.json())
 ConnectionDB()
-app.use("/user",allRouters.userRouter)
+app.use("/category",allRouters.categoryRouter)
+app.use("/subCategory",allRouters.subCategoryRouter)
+app.use("/brand",allRouters.brandRouter)
 app.use("/user",allRouters.userRouter)
 
 app.get('/', (req, res) => res.send('Hello World!'))
