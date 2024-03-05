@@ -25,17 +25,17 @@ const brandSchema = new Schema(
     },
     createdBy: {
       type: Schema.Types.ObjectId,
-      ref: 'User',
+      ref: 'user',
       required: true,
     },
     subCategoryId: {
       type: Schema.Types.ObjectId,
-      ref: 'subCategory',
+      ref: 'subcategory',
       required: true,
     },
     categoryId: {
       type: Schema.Types.ObjectId,
-      ref: 'Category',
+      ref: 'category',
       required: true,
     },
     customId: String,
@@ -45,4 +45,4 @@ const brandSchema = new Schema(
   },
 )
 
-export const brandModel = model('Brand', brandSchema)
+export const brandModel = model('brand', brandSchema)
